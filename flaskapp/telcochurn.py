@@ -101,7 +101,7 @@ app.jinja_env.globals.update(generate_input_lines=generate_input_lines)
 
 def get_token():
     auth_token = "TCz8esUU444DCHUPuidvoScfeyYdac-DtcKmS8rdAPuJ"
-    auth_username = ''   #1ms18cs078@msrit.edu
+    auth_username = ""  #1ms18cs078@msrit.edu
     auth_password =""       #'h3Z@rC2H%iXQ/6t'
     auth_url = ""    #'https://eu-gb.ml.cloud.ibm.com/ml/v4/deployments/207e6a2b-7fb7-4ecb-bcea-fc5cd37aedec/predictions?version=2020-11-22'
 
@@ -130,8 +130,8 @@ class churnForm():
     @app.route('/', methods=['GET', 'POST'])
     def index():
 
-        if request.method == 'POST':
-            ID = 999
+        if request.method == 'POST':   
+        ID = 999
 
             session['ID'] = ID
             data = {}
