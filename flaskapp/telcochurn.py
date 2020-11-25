@@ -100,10 +100,10 @@ app.jinja_env.globals.update(generate_input_lines=generate_input_lines)
 
 
 def get_token():
-    auth_token = ""
-    auth_username = '1ms18cs078@msrit.edu'
-    auth_password = 'h3Z@rC2H%iXQ/6t'
-    auth_url = 'https://eu-gb.ml.cloud.ibm.com/ml/v4/deployments/207e6a2b-7fb7-4ecb-bcea-fc5cd37aedec/predictions?version=2020-11-22'
+    auth_token = "TCz8esUU444DCHUPuidvoScfeyYdac-DtcKmS8rdAPuJ"
+    auth_username = ''   #1ms18cs078@msrit.edu
+    auth_password =""       #'h3Z@rC2H%iXQ/6t'
+    auth_url = ""    #'https://eu-gb.ml.cloud.ibm.com/ml/v4/deployments/207e6a2b-7fb7-4ecb-bcea-fc5cd37aedec/predictions?version=2020-11-22'
 
     if (auth_token):
         # All three are set. bad bad!
@@ -178,7 +178,7 @@ class churnForm():
 
             result_dict = dict(zip(result_keys, result_vals[0]))
 
-            churn_risk = result_dict["predictedLabel"].lower()
+            churn_risk = result_dict["prediction"].lower()
             no_percent = result_dict["probability"][0] * 100
             yes_percent = result_dict["probability"][1] * 100
             flash('Percentage of this customer leaving is: %.0f%%'
